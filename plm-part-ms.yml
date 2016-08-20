@@ -4,11 +4,10 @@ spring:
 ---
 spring:
   profiles: development-cloud
-server:
-  port: 8000
-spring:
   application:
     name: plm-part-ms  
+server:
+  port: 8000
 
 eureka:
   client:
@@ -24,11 +23,10 @@ logging:
 ---
 spring:
   profiles: cloud
-server:
-  port: 8000
-spring:
   application:
     name: plm-part-ms  
+server:
+  port: 8000  
 
 eureka:
   client:
