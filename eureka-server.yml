@@ -6,8 +6,6 @@ spring:
   profiles: development-cloud
   application:
     name: eureka-server  
-server:
-  port: 8761
 # Defines the Eureka server that is used by the Netflix OSS components to use as the registry
 # for server discovery
 eureka:
@@ -16,6 +14,7 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    prefer-ip-address: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 logging:
@@ -29,8 +28,7 @@ spring:
   profiles: cloud
   application:
     name: eureka-server  
-server:
-  port: 8761
+
 # Defines the Eureka server that is used by the Netflix OSS components to use as the registry
 # for server discovery
 eureka:
@@ -47,6 +45,13 @@ logging:
         org.springframework: 'OFF'   
         com.netflix.eureka: 'OFF'  
         com.netflix.discovery: 'OFF' 
+---
+spring:
+  profiles: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/        
 
 
 
