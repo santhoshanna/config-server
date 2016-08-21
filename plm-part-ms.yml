@@ -8,11 +8,11 @@ spring:
     name: plm-part-ms  
 
 eureka:
-  name:eureka-server
-  vipAddress: ${eureka.name}.eastus2.cloudapp.azure.com
+   name:eureka-server
+ # vipAddress: ${eureka.name}.eastus2.cloudapp.azure.com
   client:
     serviceUrl:
-      defaultZone: http://${eureka.vipAddress}:8761/eureka/
+      defaultZone: http://${eureka.name}:8761/eureka/
 
 logging:
   file: F://application_logs/${spring.application.name}.log

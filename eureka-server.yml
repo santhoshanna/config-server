@@ -10,7 +10,7 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: ${spring.application.name}.eastus2.cloudapp.azure.com
+    hostname: ${spring.application.name}
   client:
     registerWithEureka: false
     fetchRegistry: false
