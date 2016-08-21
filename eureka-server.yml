@@ -10,15 +10,15 @@ spring:
 # for server discovery
 eureka:
   instance:
-    hostname: ${spring.application.name}
+    hostname: eureka-server
   client:
     registerWithEureka: false
     fetchRegistry: false
     prefer-ip-address: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
 logging:
-  file: F://application_logs/${spring.application.name}.log
+  file: F://application_logs/eureka-server.log
   level:
         org.springframework: 'OFF'   
         com.netflix.eureka: 'OFF'  

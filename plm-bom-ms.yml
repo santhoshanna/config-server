@@ -13,7 +13,7 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka/
 
 logging:
-  file: F://application_logs/${spring.application.name}.log
+  file: F://application_logs/plm-bom-ms.log
   level:
         org.springframework: DEBUG   
         com.netflix.eureka: 'OFF'  
