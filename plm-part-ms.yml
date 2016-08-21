@@ -9,6 +9,7 @@ spring:
 
 eureka:
   client:
+    registerWithEureka: true
     serviceUrl:
       defaultZone: http://eureka-server:8761/eureka/
 
